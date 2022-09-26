@@ -1,14 +1,19 @@
-class School {
+export class School {
+
+
     public teachersList: [string];
     public studentsList: [string];
 
     public assignments: [string, string];
 
-    public constructor(assignments: [string, string]) {
-        this.assignments = assignments;
+    constructor() {
+        // this.studentsList = sList;
+        // this.teachersList = tList;
     }
 
+
     public addTeachers(teacher: string) {
+        console.log(teacher)
         this.teachersList.push(teacher);
     }
 
