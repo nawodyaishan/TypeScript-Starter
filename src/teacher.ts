@@ -5,3 +5,4 @@ export class Teacher extends Person {
         super(name, age);
     }
 }
+

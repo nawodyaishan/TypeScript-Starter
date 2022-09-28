@@ -1,27 +1,29 @@
+import {Student} from "./student";
+import {Teacher} from "./teacher";
+
 export class School {
+    public teacherList: Teacher[] = [];
+    public studentList: Student[] = [];
+    public assignmentList: [Teacher, Student][] = [];
 
 
-    public teachersList: [string];
-    public studentsList: [string];
-
-    public assignments: [string, string];
-
-    constructor() {
-        // this.studentsList = sList;
-        // this.teachersList = tList;
+    public addTeacher(teacher: Teacher) {
+        this.teacherList.push(teacher);
+        // console.log(teacher.name);
     }
 
-
-    public addTeachers(teacher: string) {
-        console.log(teacher)
-        this.teachersList.push(teacher);
+    public addStudent(student: Student) {
+        this.studentList.push(student);
+        // console.log(student.name);
     }
 
-    public addStudents(student: string) {
-        this.studentsList.push(student);
+    public printAssignment() {
+        for (const assignments of this.assignmentList)
+            console.log(assignments);
     }
 
-    public addAssignments(student: string, teacher: string) {
-        this.assignments.push(teacher, student);
+    public addAssignment(teacher: Teacher, student: Student) {
+        this.assignmentList.push([teacher, student]);
     }
+
 }
